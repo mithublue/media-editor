@@ -22,7 +22,7 @@ class Imager_Config {
          * Defines the app root url, it should be  url of the root
          * where the app is places, change it accordingly
          */
-        'root_url' => 'http://localhost/interview/joomshaper/task/',
+        'root_url' => 'http://localhost/interview/joomshaper/stuff/test/',
 
         /*
          * Defines the name of the folder where

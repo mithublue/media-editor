@@ -119,6 +119,7 @@ class Imager_Media
         foreach ( $enc_data as $k => $each_line ) {
             if( !$each_line ) continue;
             $each_line = explode( '|', $each_line );
+            if( count( $each_line ) < 2 ) continue;
             $image_data[$each_line[0]] = json_decode( base64_decode($each_line[1]) );
         }
 

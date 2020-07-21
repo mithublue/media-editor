@@ -15721,8 +15721,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\xampp64\htdocs\interview\joomshaper\task\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\xampp64\htdocs\interview\joomshaper\task\resources\less\style.less */"./resources/less/style.less");
+__webpack_require__(/*! D:\xampp64\htdocs\interview\joomshaper\stuff\test\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\xampp64\htdocs\interview\joomshaper\stuff\test\resources\less\style.less */"./resources/less/style.less");
 
 
 /***/ })
