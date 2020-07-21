@@ -74,7 +74,6 @@
         mounted() {
             if( typeof this.adjusted_filter.filter !== 'undefined' ) {
                 var filter_fragments = this.adjusted_filter.filter.split(' ');
-                console.log(filter_fragments);
                 this.sepia = parseInt(filter_fragments[0].replace(/[^0-9]/g,''));
                 this.saturate = parseInt(filter_fragments[1].replace(/[^0-9]/g,''));
                 this.brightness = parseInt(filter_fragments[2].replace(/[^0-9]/g,''));

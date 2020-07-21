@@ -62,6 +62,12 @@ class Imager_Config {
 
     }
 
+    /**
+     * Get config value
+     *
+     * @param $name
+     * @return bool|mixed
+     */
     public function config( $name ) {
         if( isset( $this->config[$name] ) ) return $this->config[$name];
         return false;

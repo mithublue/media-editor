@@ -1995,7 +1995,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
   mounted: function mounted() {
     if (typeof this.adjusted_filter.filter !== 'undefined') {
       var filter_fragments = this.adjusted_filter.filter.split(' ');
-      console.log(filter_fragments);
       this.sepia = parseInt(filter_fragments[0].replace(/[^0-9]/g, ''));
       this.saturate = parseInt(filter_fragments[1].replace(/[^0-9]/g, ''));
       this.brightness = parseInt(filter_fragments[2].replace(/[^0-9]/g, ''));
@@ -15357,8 +15356,7 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     on_upload: function on_upload() {
       var _this = this;
 
-      var fd = new FormData(); //console.log(this.selected_file.name);
-
+      var fd = new FormData();
       fd.append('image', this.selected_file, this.selected_file.name);
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.post(base_url + '?action=upload', fd, {
         onUploadProgress: function onUploadProgress(uploadEvent) {//console.log( 'Upload progress' + Math.round( uploadEvent.loaded / uploadEvent.total * 100 ) + '%');
@@ -15382,8 +15380,6 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.post(base_url + '?action=save-image', fd).then(function (res) {
         _this.insert_style();
 
-        console.log('qwewqe');
-
         _this.show_notification('Image saved successfully !');
       });
     },
@@ -15394,8 +15390,7 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
         ratio: this.selected_ratio,
         filter: this.selected_filter,
         adjusted_filter: this.adjusted_filter
-      }; //console.log(sel_applied_data);
-
+      };
       return sel_applied_data;
     },
     adjust_filter: function adjust_filter(style) {

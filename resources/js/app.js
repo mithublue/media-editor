@@ -185,7 +185,6 @@ const app = new Vue({
         on_upload: function () {
             var _this = this;
             var fd = new FormData;
-            //console.log(this.selected_file.name);
             fd.append('image', this.selected_file, this.selected_file.name);
             axios.post( base_url + '?action=upload', fd, {
                 onUploadProgress: function ( uploadEvent ) {
@@ -209,7 +208,6 @@ const app = new Vue({
             axios.post( base_url + '?action=save-image', fd )
                 .then(function (res) {
                     _this.insert_style();
-                    console.log('qwewqe');
                     _this.show_notification( 'Image saved successfully !');
                 });
         },
@@ -221,7 +219,6 @@ const app = new Vue({
                 filter: this.selected_filter,
                 adjusted_filter: this.adjusted_filter
             }
-            //console.log(sel_applied_data);
             return sel_applied_data;
         },
         adjust_filter: function (style) {

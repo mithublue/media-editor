@@ -1,15 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="<?php echo Imager_Config()->config('root_url'); ?>assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo Imager_Config()->config('root_url'); ?>assets/css/style.css">
-</head>
-<body>
+<?php include_once 'header.php'; ?>
 <div id="app" v-cloak>
     <div class="header">
         <div class="container">
@@ -128,9 +117,4 @@
         </div>
     </div>
 </div>
-<script>
-    var base_url = '<?php echo Imager_Config()->config('root_url'); ?>';
-</script>
-<script src="<?php echo Imager_Config()->config( 'root_url' ); ?>assets/js/app.js"></script>
-</body>
-</html>
+<?php include_once 'footer.php'; ?>
