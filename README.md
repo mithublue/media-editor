@@ -1,4 +1,4 @@
-# media-editor
+# Media Editor
 
 Easy editor for media
 
