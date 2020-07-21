@@ -40,6 +40,7 @@ const app = new Vue({
         AdjustFilterPanel
     },
     data: {
+        noti_msg: '',
         all_applied_data: [],
         base_url: base_url,
         active_tab: null,
@@ -193,6 +194,7 @@ const app = new Vue({
             } )
                 .then(function (res) {
                     if ( !res.data.success ) return;
+                    _this.show_notification( 'Image uploaded successfully !');
                     _this.get_images();
                 })
         },
@@ -206,8 +208,9 @@ const app = new Vue({
             fd.append( 'applied_data', JSON.stringify( sel_applied_data ) );
             axios.post( base_url + '?action=save-image', fd )
                 .then(function (res) {
-                    console.log(res.data);
                     _this.insert_style();
+                    console.log('qwewqe');
+                    _this.show_notification( 'Image saved successfully !');
                 });
         },
         save_modification: function () {
@@ -231,9 +234,17 @@ const app = new Vue({
         revart_image: function () {
             this.reset_style();
             this.insert_style();
+            this.show_notification( 'Image revarted !');
         },
         set_filters: function(filters) {
             this.adjusted_filter = filters;
+        },
+        show_notification: function (msg) {
+            var _this = this;
+            _this.noti_msg = msg;
+            setTimeout(function () {
+                _this.noti_msg = ''
+            },3000);
         }
     },
     created: function () {

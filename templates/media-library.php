@@ -25,6 +25,9 @@
     <div class="body">
         <div class="container">
             <div class="row">
+                <div class="col-sm-12" v-if="noti_msg">
+                    <div class="alert alert-warning">{{ noti_msg }}</div>
+                </div>
                 <div class="col-sm-12">
                     <div class="page-name mb-3" v-if="current_image">
                         <h4 v-if="current_image">{{ current_image.name }}</h4>
@@ -56,19 +59,13 @@
                                     <div class="nav-container mt-3">
                                         <ul class="nav nav-pills" id="pills-tab" role="tablist">
                                             <li class="nav-item">
-                                                <a class="nav-link" @click="make_active('adjust')" :class="{ active: active_tab == 'adjust' }" href="javascript:">
-                                                    Adjust
-                                                </a>
+                                                <a class="nav-link" @click="make_active('adjust')" :class="{ active: active_tab == 'adjust' }" href="javascript:">Adjust</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" @click="make_active('filter')" :class="{ active: active_tab == 'filter' }"  href="javascript:">
-                                                    Filter
-                                                </a>
+                                                <a class="nav-link" @click="make_active('filter')" :class="{ active: active_tab == 'filter' }"  href="javascript:">Filter</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" @click="make_active('crop')" :class="{ active: active_tab == 'crop' }"  href="javascript:">
-                                                    Crop
-                                                </a>
+                                                <a class="nav-link" @click="make_active('crop')" :class="{ active: active_tab == 'crop' }"  href="javascript:">Crop</a>
                                             </li>
                                         </ul>
                                     </div>
